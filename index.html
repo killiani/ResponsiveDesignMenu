@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Responsive Retina-Friendly Menu</title>
+		<meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
+		<meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+			<header>
+				<h1>Klapproth + Koch<span>Responsiv Design</span></h1>	
+			</header>
+			<div class="bg"></div>
+			<div class="content">
+			<div class="main clearfix">
+				<nav id="menu" class="nav">					
+					<ul>
+						<li>
+							<a onclick=blur_0() href="#">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+								</span>
+								<span>Home</span>
+							</a>
+						</li>
+						<li>
+							<a onclick=blur_1() href="#">
+								<span class="icon"> 
+									<i aria-hidden="true" class="icon-services"></i>
+								</span>
+								<span>Service</span>
+							</a>
+						</li>
+						<li>
+							<a onclick=blur_2() href="#">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-portfolio"></i>
+								</span>
+								<span>Portfolio</span>
+							</a>
+						</li>
+						<li>
+							<a onclick=blur_3() href="#">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-blog"></i>
+								</span>
+								<span>Blog</span>
+							</a>
+						</li>
+						<li>
+							<a onclick=blur_4() href="#">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-team"></i>
+								</span>
+								<span>Crowd</span>
+							</a>
+						</li>
+						<li>
+							<a onclick=blur_5() href="#">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>Contact</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		</div><!-- /container -->
+			<div class="section_1">
+
+<div class="text">
+							<h2>Hauptüberschrift</h2>
+    <p style="text-align: center"><i>"Bavaria ipsum dolor sit amet ghupft wia gsprunga Wurschtsolod san ned etza des muas ma hoid kenna. Des basd scho soi owe hinter’m Berg san a no Leit middn."</i></p><p><br><img src="assets/lerone-pieters-FMvkCoq-MII-unsplash.jpg">
+    	<h3>Teilüberschrift</h3>
+        <br>Hinter’m Berg san a no Leit mim pfundig helWatschnpladdla. Guglhupf schoo gschmeidig ma hod, des is schee gschmeidig. Mim des muas ma hoid kenna Gstanzl gscheit des wiad a Mordsgaudi am acht’n Tag schuf Gott des Bia: Obandln fei in da Xaver a om auf’n Gipfe a liabs Deandl Ohrwaschl Blosmusi. Nia need singd an bittschön am acht’n Tag schuf Gott des Bia scheans kumm geh Weißwiaschd eam hoggd: Weißwiaschd sog i nimmds, Obazda. Spernzaln wann griagd ma nacha wos z’dringa measi a fescha Bua kummd Wurschtsolod Kaiwe umananda Brezn. I moan oiwei Broadwurschtbudn a geh Trachtnhuat! Hinter’m Berg san a no Leit auf’d Schellnsau Brodzeid wiavui gelbe Rüam, um Godds wujn vo de Blosmusi Resi. Hetschapfah Watschnbaam sowos mogsd a Bussal, des basd scho Spezi wui oans, zwoa, gsuffa abfieseln wos!<br><br>
+        Des is a gmahde Wiesn nia Blosmusi nimma ognudelt. Zidern hod gschmeidig Brezn, Engelgwand. Kummd fei es amoi, hob i an Suri Woibbadinga! Aasgem Freibia oa oba Oachkatzlschwoaf blärrd schnacksln gschmeidig sog i. Samma nomoi griasd eich midnand, zünftig. Gschicht damischa heid a Prosit der Gmiadlichkeit Klampfn Schmankal Foidweg Guglhupf, naa so. Sauba boarischer a bravs baddscher pfiad de du dadst ma scho daugn mi wos, Edlweiss greaßt eich nachad Haferl. Hi des i waar soweid samma, Zidern. Oans auf gehds beim Schichtl Buam umananda oba Wiesn kummd allerweil wiavui bitt, mei? Broadwurschtbudn in da greana Au resch mi spernzaln wui nia need Ewig und drei Dog Wurscht, Watschnbaam: Kuaschwanz wolpern obandeln Enzian! </p><br><br>
+
+
+
+</div>
+
+<div class="section_2">
+	<div class="text">
+		<h4>#Footer</h4>
+</div>
+
+</div>
+
+
+
+			</div>
+		<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i></button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			function blur_0(){
+				document.getElementsByClassName('bg')[0].style.filter = "blur(0px)";
+			}
+			function blur_1(){
+				document.getElementsByClassName('bg')[0].style.filter = "blur(2px)";
+			}
+			function blur_2(){
+				document.getElementsByClassName('bg')[0].style.filter = "blur(4px)";
+			}
+			function blur_3(){
+				document.getElementsByClassName('bg')[0].style.filter = "blur(6px)";
+			}
+			function blur_4(){
+				document.getElementsByClassName('bg')[0].style.filter = "blur(10px)";
+			}
+			function blur_5(){
+				document.getElementsByClassName('bg')[0].style.filter = "blur(15px)";
+			}
+
+		</script>
+	</body>
+</html>
